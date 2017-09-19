@@ -12,8 +12,9 @@ function isValidID(req, res, next ) {
 
 function validTrip(trip) {
   const hasName = typeof trip.name == 'string' && trip.name.trim() != '';
-  const hasDescription = typeof trip.description == 'string' && trip.description.trim() != '';
-  return hasName && hasDescription;
+  const hasStart = typeof trip.start_date == 'string';
+  const hasEnd = typeof trip.end_date == 'string';
+  return hasName;
 }
 
 router.get('/', (req, res) => {

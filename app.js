@@ -13,6 +13,8 @@ const photos = require('./api/photos_api')
 const patronstrips = require('./api/patronstrips_api')
 const photostrips = require('./api/photostrips_api')
 const userspws = require('./api/userspws_api')
+const sidenav = require('./api/getSideNavBar_api')
+const eventdata = require('./api/eventdata_api')
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -27,6 +29,8 @@ app.use('/api/photos', photos)
 app.use('/api/patronstrips', patronstrips)
 app.use('/api/photostrips', photostrips)
 app.use('/api/userspws', userspws)
+app.use('/api/sidenav', sidenav)
+app.use('/api/event', eventdata)
 
 
 // catch 404 and forward to error handler
