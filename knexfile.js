@@ -6,7 +6,7 @@ module.exports = {
     client: 'pg',
     connection: 'postgres://localhost/kuva-server'
   },
-  development: {
+  production: {
     client: 'pg',
     connection: process.env.DATABASE_URL
   },
