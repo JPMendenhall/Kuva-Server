@@ -8,6 +8,11 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const patrons = require('./api/patrons_api')
+const trips = require('./api/trips_api')
+const photos = require('./api/photos_api')
+const patronstrips = require('./api/patronstrips_api')
+const photostrips = require('./api/photostrips_api')
+const userspws = require('./api/userspws_api')
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -17,6 +22,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/api/patrons', patrons)
+app.use('/api/trips', trips)
+app.use('/api/photos', photos)
+app.use('/api/patronstrips', patronstrips)
+app.use('/api/photostrips', photostrips)
+app.use('/api/userspws', userspws)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
