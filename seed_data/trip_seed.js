@@ -1,8 +1,8 @@
 module.exports = [
   {
     name: 'Project Week 2017',
-    start_date: '1505517889',
-    end_date: '1506122689'
+    start_date: '1505517889000',
+    end_date: '1506122689000'
   },
   {
     name: 'Beach 2017',
