@@ -9,7 +9,7 @@ module.exports = {
   },
   getPatronsPics(id) {
     return knex.from('patron')
-    .select('patron.profile_pic')
+    .select('patron.profile_pic', 'patron.instagram_key')
     .join('patron_trip', 'patron.user_id', 'patron_trip.user_id')
     .join('trip', 'trip.trip_id', 'patron_trip.trip_id')
     .where('trip.trip_id', id)
