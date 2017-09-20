@@ -33,7 +33,7 @@ module.exports = [
     instagram_id: '634657769',
     password: '$2a$10$7UCfdFLFTcUlXP6bUnlDm.pJqL8/pZ9XpL8u4USOmnuLWeKtHrfl6',
     profile_pic: 'https://scontent.cdninstagram.com/t51.2885-19/s150x150/20213785_259930234504358_7053195800297340928_a.jpg',
-    instagram_key:'634657769.f866f3d.214922cf24f84b52bdcb85eee0ca8be'
+    instagram_key:'634657769.f866f3d.214922cf24f84b52bdcb85eee0ca8be1'
   },
   {
     first_name: 'James',
