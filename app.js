@@ -49,6 +49,7 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: req.app.get('env') === 'development' ? err : {}
   });
+  console.error(err);
 });
 
 module.exports = app;
