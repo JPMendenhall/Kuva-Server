@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
     table.text("first_name")
     table.text("last_name")
     table.text("username")
+    table.text("password")
     table.bigInteger("instagram_id")
     table.text("profile_pic")
     table.text("instagram_key")
