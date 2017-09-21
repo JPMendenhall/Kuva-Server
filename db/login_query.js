@@ -4,7 +4,7 @@ const knex = require('./knex')
 module.exports = {
   getAll() {
     return knex('patron')
-    .select('patron.username', 'patron.password');
+    .select('patron.user_id', 'patron.username', 'patron.password');
   },
   getOne(id) {
     return knex('patron')

@@ -35,24 +35,16 @@ router.get('/:id', isValidID, (req, res, next) => {
 });
 
 router.post('/', function (req, res, next) {
-  console.log(req.body);
   knex('patron').where('username', req.body.username)
     .then(user => {
-      console.log("1")
       if (user.length === 0) {
         res.json({ Error: "Try again" });
       } else {
-        console.log("2");
         var match = bcrypt.compareSync(req.body.password, user[0].password)
-        console.log(match, user[0].password + "  <-- MATCH");
         if (match) {
           delete user[0].password;
-          //console.log(JSON.stringify(user[0]));
           user = JSON.parse(JSON.stringify(user[0]))
-          // let userObj = Object.assign({}, user[0]);
-          // var token = jwt.sign({ id: user[0].id, email: user[0].email, username: user[0].username, password: user[0].password }, 'no');
           var token = jwt.sign(user, 'no');
-          console.log(token + "  <--- TOKEN");
           res.json({ data: token });
         } else {
           res.json({ error: "Shit isn't working" });
