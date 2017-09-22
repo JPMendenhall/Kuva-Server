@@ -38,6 +38,7 @@ router.post('/', function (req, res, next) {
   knex('patron').where('username', req.body.username)
     .then(user => {
       if (user.length === 0) {
+        res.statusCode = 403;
         res.json({ Error: "Try again" });
       } else {
         var match = bcrypt.compareSync(req.body.password, user[0].password)
